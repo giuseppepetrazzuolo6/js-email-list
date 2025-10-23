@@ -6,11 +6,11 @@ generare 10 indirizzi email e stamparli in pagina all'interno di una lista.
 
 //dichiaro una variabile per l'elemento html
 const emailListEl = document.getElementById('email-list')
-console.log(emailListEl);
+//console.log(emailListEl);
 
 //creo una variabile in cui inserire l'url dell'API
 const randomEmailUrl = 'https://flynn.boolean.careers/exercises/api/random/mail'
-console.log(randomEmailUrl);
+//console.log(randomEmailUrl);
 
 //ora devo creare un ciclo for in cui inserire la chiamata api per far si che venga ripetuta 10 volte 
 //se inserisco il for all'interno della chiamata api mi consentirebbe di generare 10 email ma sempre sulla singola chiamata
@@ -20,9 +20,14 @@ for (let i = 0; i < 10; i++) {
     //eseguo la chiamata AJAX
     axios.get(randomEmailUrl)
         .then(response => {
-            console.log(response.data);
+            //console.log(response.data);
+            const result = response.data.response
+            //console.log(result);
+            //inserisco i list items in a cui accoppiare le email
+            const li = document.createElement('li');
+            li.innerText = result;
+            emailListEl.appendChild(li);
         })
-
 }
 
 
