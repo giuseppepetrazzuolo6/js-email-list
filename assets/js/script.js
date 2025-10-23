@@ -17,6 +17,11 @@ console.log(randomEmailUrl);
 //quindi ottorrei 10 email, ma tutte uguali
 //creo il ciclo for
 for (let i = 0; i < 10; i++) {
+    //eseguo la chiamata AJAX
+    axios.get(randomEmailUrl)
+        .then(response => {
+            console.log(response.data);
+        })
 
 }
 
