@@ -12,3 +12,12 @@ console.log(emailListEl);
 const randomEmailUrl = 'https://flynn.boolean.careers/exercises/api/random/mail'
 console.log(randomEmailUrl);
 
+//ora devo creare un ciclo for in cui inserire la chiamata api per far si che venga ripetuta 10 volte 
+//se inserisco il for all'interno della chiamata api mi consentirebbe di generare 10 email ma sempre sulla singola chiamata
+//quindi ottorrei 10 email, ma tutte uguali
+//creo il ciclo for
+for (let i = 0; i < 10; i++) {
+
+}
+
+
